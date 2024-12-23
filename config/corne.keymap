@@ -36,7 +36,7 @@
             bindings = <
 &mt ESCAPE TAB  &kp Q  &kp W  &kp F             &kp P  &kp B        &kp J    &kp L             &kp U      &kp Y    &kp SEMI  &kp BACKSLASH
 &kp BSPC        &kp A  &kp R  &HRML LEFT_GUI S  &kp T  &kp G        &kp M    &kp N             &kp E      &kp I    &kp O     &kp SQT
-&kp LSHFT       &kp Z  &kp X  &kp C             &kp D  &kp V        &kp K    &kp H             &kp COMMA  &kp DOT  &kp FSLH  &kp RALT
+&kp LSHFT       &kp Z  &kp X  &kp C             &kp D  &kp V        &kp K    &kp H             &kp COMMA  &kp DOT  &kp FSLH  &mt K_NEXT K_PLAY_PAUSE
                               &kp LEFT_GUI      &mo 1  &kp SPACE    &kp RET  &kp LEFT_CONTROL  &kp RALT
             >;
         };
