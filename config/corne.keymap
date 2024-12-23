@@ -19,7 +19,7 @@
             flavor = "balanced";
             hold-trigger-on-release;
             hold-trigger-key-positions = <14 13 15 16 0 1 2 3 4 5 12 13 14 15 16 17 24 25 26 27 28 29 36 37 38>;
-            quick-tap-ms = <200>;
+            quick-tap-ms = <160>;
         };
     };
 
@@ -34,10 +34,10 @@
             //                    | GUI | LWR | SPC |   | ENT | RSE  | ALT |
 
             bindings = <
-&mt ESCAPE TAB  &kp Q  &kp W  &kp F             &kp P  &kp B               &kp J    &kp L      &kp U      &kp Y    &kp SEMI  &mt K_NEXT K_PLAY_PAUSE
-&kp BSPC        &kp A  &kp R  &HRML LEFT_GUI S  &kp T  &kp G               &kp M    &kp N      &kp E      &kp I    &kp O     &kp SQT
-&kp LSHFT       &kp Z  &kp X  &kp C             &kp D  &kp V               &kp K    &kp H      &kp COMMA  &kp DOT  &kp FSLH  &kp RALT
-                              &kp LEFT_GUI      &mo 1  &kp LEFT_CONTROL    &kp RET  &kp SPACE  &kp LCTRL
+&HRML ESCAPE TAB  &kp Q  &kp W  &kp F             &kp P  &kp B                     &kp J    &kp L      &kp U      &kp Y    &kp SEMI  &kp BACKSLASH
+&kp BSPC          &kp A  &kp R  &HRML LEFT_GUI S  &kp T  &kp G                     &kp M    &kp N      &kp E      &kp I    &kp O     &kp SQT
+&kp LSHFT         &kp Z  &kp X  &kp C             &kp D  &kp V                     &kp K    &kp H      &kp COMMA  &kp DOT  &kp FSLH  &kp RALT
+                                &kp LEFT_GUI      &mo 1  &mt LEFT_CONTROL SPACE    &kp RET  &kp SPACE  &kp LCTRL
             >;
         };
 
@@ -49,10 +49,10 @@
             //                    | GUI |     | SPC |   | ENT |     | ALT     |
 
             bindings = <
-&kp TAB    &trans        &kp N7        &kp N8        &kp N9        &trans       &trans   &kp LEFT_BRACKET  &kp LEFT_BRACE  &kp RIGHT_BRACE  &kp RIGHT_BRACKET  &kp BSPC
-&trans     &kp NUMBER_0  &kp NUMBER_4  &kp N5        &kp NUMBER_6  &kp PLUS     &trans   &kp LEFT          &kp DOWN        &kp UP           &kp RIGHT          &trans
-&kp LSHFT  &trans        &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp EQUAL    &trans   &trans            &trans          &trans           &trans             &trans
-                                       &kp LGUI      &trans        &kp SPACE    &kp RET  &mo 2             &trans
+&kp TAB    &trans        &kp N7        &kp N8        &kp N9        &kp PLUS     &trans   &kp LEFT_BRACKET   &kp LEFT_BRACE   &kp MINUS  &trans     &kp BSPC
+&trans     &kp NUMBER_0  &kp NUMBER_4  &kp N5        &kp NUMBER_6  &kp EQUAL    &trans   &kp LEFT           &kp DOWN         &kp UP     &kp RIGHT  &trans
+&kp LSHFT  &trans        &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &trans       &trans   &kp RIGHT_BRACKET  &kp RIGHT_BRACE  &kp UNDER  &trans     &trans
+                                       &kp LGUI      &trans        &kp SPACE    &kp RET  &mo 2              &trans
             >;
         };
 
