@@ -37,7 +37,7 @@
 &mt ESCAPE TAB  &kp Q  &kp W  &kp F             &kp P  &kp B               &kp J    &kp L      &kp U      &kp Y    &kp SEMI  &mt K_NEXT K_PLAY_PAUSE
 &kp BSPC        &kp A  &kp R  &HRML LEFT_GUI S  &kp T  &kp G               &kp M    &kp N      &kp E      &kp I    &kp O     &kp SQT
 &kp LSHFT       &kp Z  &kp X  &kp C             &kp D  &kp V               &kp K    &kp H      &kp COMMA  &kp DOT  &kp FSLH  &kp RALT
-                              &kp LEFT_ALT      &mo 1  &kp LEFT_CONTROL    &kp RET  &kp SPACE  &kp LCTRL
+                              &kp LEFT_GUI      &mo 1  &kp LEFT_CONTROL    &kp RET  &kp SPACE  &kp LCTRL
             >;
         };
 
