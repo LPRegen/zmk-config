@@ -49,10 +49,10 @@
             //                    | GUI |     | SPC |   | ENT |     | ALT     |
 
             bindings = <
-&kp TAB    &trans        &kp N7        &kp N8        &kp N9        &kp PLUS     &trans   &kp LEFT_BRACKET   &kp LEFT_BRACE   &kp MINUS  &trans     &kp BSPC
-&trans     &kp NUMBER_0  &kp NUMBER_4  &kp N5        &kp NUMBER_6  &kp EQUAL    &trans   &kp LEFT           &kp DOWN         &kp UP     &kp RIGHT  &trans
-&kp LSHFT  &trans        &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &trans       &trans   &kp RIGHT_BRACKET  &kp RIGHT_BRACE  &kp UNDER  &trans     &trans
-                                       &kp LGUI      &trans        &kp SPACE    &kp RET  &mo 2              &trans
+&kp TAB    &trans        &kp N7        &kp N8        &kp N9        &kp PLUS     &trans                &kp LEFT_BRACKET   &kp LEFT_BRACE   &kp MINUS  &kp K_VOLUME_UP    &kp BSPC
+&trans     &kp NUMBER_0  &kp NUMBER_4  &kp N5        &kp NUMBER_6  &kp EQUAL    &kp LEFT_PARENTHESIS  &kp LEFT           &kp DOWN         &kp UP     &kp RIGHT          &kp RIGHT_PARENTHESIS
+&kp LSHFT  &trans        &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &trans       &trans                &kp RIGHT_BRACKET  &kp RIGHT_BRACE  &kp UNDER  &kp K_VOLUME_DOWN  &kp K_PREVIOUS
+                                       &kp LGUI      &trans        &kp SPACE    &kp RET               &mo 2              &trans
             >;
         };
 
