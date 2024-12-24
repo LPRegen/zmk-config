@@ -6,7 +6,6 @@
 
 #include <behaviors.dtsi>
 #include <dt-bindings/zmk/keys.h>
-#include <dt-bindings/zmk/keys.h>
 
 / {
     behaviors {
@@ -27,21 +26,13 @@
             compatible = "zmk,behavior-tap-dance";
             label = "CUSTOM_ESCAPE";
             #binding-cells = <0>;
-            bindings = <&kt TAB>, <&kp ESCAPE>;
+            bindings = <&kp TAB>, <&kp ESCAPE>;
 
             tapping-term-ms = <160>;
         };
     };
 
-    combos {
-        compatible = "zmk,combos";
-
-        escape {
-            bindings = <&kp ESCAPE>;
-            key-positions = <14 15>;
-            layers = <0>;
-        };
-    };
+    combos { compatible = "zmk,combos"; };
 
     keymap {
         compatible = "zmk,keymap";
