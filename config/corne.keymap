@@ -47,12 +47,7 @@
         umlaut: umlaut {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings =
-                <&macro_press &kp K_MENU &kp LSHFT &kp DQT>,
-                <&macro_tap &kp A>,
-                <&macro_release &kp K_MENU &kp LSHFT &kp DQT>,
-
-            label = "UMLAUT";
+            bindings = <&macro_tap>, <&kp K_MENU &kp LSHFT &kp DQT &kp A>;
         };
     };
 
