@@ -20,16 +20,16 @@
             hold-trigger-on-release;
             hold-trigger-key-positions = <14 13 15 16 1 2 3 4 5 12 13 14 15 16 17 24 25 26 27 28 29 36 37 38 0>;
             quick-tap-ms = <140>;
-            require-prior-idle-ms = <150>;
+            require-prior-idle-ms = <180>;
         };
 
-        custom_escape: custom_escape {
+        btd_escape: btd_escape {
             compatible = "zmk,behavior-tap-dance";
-            label = "CUSTOM_ESCAPE";
+            label = "BTD_ESCAPE";
             #binding-cells = <0>;
             bindings = <&kp TAB>, <&kp ESCAPE>;
 
-            tapping-term-ms = <180>;
+            tapping-term-ms = <150>;
         };
 
         new_escape: new_escape {
@@ -59,10 +59,10 @@
             //                    | GUI | LWR | SPC |   | ENT | RSE  | ALT |
 
             bindings = <
-&new_escape ESCAPE TAB  &kp Q  &kp W  &kp F             &kp P  &kp B        &kp J    &kp L             &kp U      &kp Y    &kp SEMI  &kp BACKSLASH
-&kp BSPC                &kp A  &kp R  &HRML LEFT_GUI S  &kp T  &kp G        &kp M    &kp N             &kp E      &kp I    &kp O     &kp SQT
-&kp LSHFT               &kp Z  &kp X  &kp C             &kp D  &kp V        &kp K    &kp H             &kp COMMA  &kp DOT  &kp FSLH  &mt K_NEXT K_PLAY_PAUSE
-                                      &kp LEFT_CONTROL  &mo 1  &kp SPACE    &kp RET  &kp LEFT_CONTROL  &kp RALT
+&btd_escape  &kp Q  &kp W  &kp F             &kp P  &kp B        &kp J    &kp L             &kp U      &kp Y    &kp SEMI  &kp BACKSLASH
+&kp BSPC     &kp A  &kp R  &HRML LEFT_GUI S  &kp T  &kp G        &kp M    &kp N             &kp E      &kp I    &kp O     &kp SQT
+&kp LSHFT    &kp Z  &kp X  &kp C             &kp D  &kp V        &kp K    &kp H             &kp COMMA  &kp DOT  &kp FSLH  &mt K_NEXT K_PLAY_PAUSE
+                           &kp LEFT_CONTROL  &mo 1  &kp SPACE    &kp RET  &kp LEFT_CONTROL  &kp RALT
             >;
         };
 
