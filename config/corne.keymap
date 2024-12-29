@@ -93,10 +93,10 @@
 
         layer_3 {
             bindings = <
-&none        &bt BT_PRV  &bt BT_CLR  &bt BT_NXT  &none   &none        &none      &kp F7  &kp F8  &kp F9  &kp F10  &none
-&sys_reset   &none       &none       &none       &none   &soft_off    &soft_off  &kp F4  &kp F5  &kp F6  &kp F11  &sys_reset
-&bootloader  &none       &none       &none       &none   &none        &none      &kp F1  &kp F2  &kp F3  &kp F12  &bootloader
-                                     &none       &trans  &none        &none      &none   &none
+&none        &bt BT_PRV  &bt BT_CLR  &bt BT_NXT  &none   &none          &none        &kp F7  &kp F8  &kp F9  &kp F10  &none
+&sys_reset   &none       &none       &none       &none   &soft_off      &soft_off    &kp F4  &kp F5  &kp F6  &kp F11  &sys_reset
+&bootloader  &none       &none       &none       &none   &kp K_POWER    &kp K_POWER  &kp F1  &kp F2  &kp F3  &kp F12  &bootloader
+                                     &none       &trans  &none          &none        &none   &none
             >;
         };
     };
