@@ -18,11 +18,11 @@
             bindings = <&kp>, <&kp>;
 
             #binding-cells = <2>;
-            tapping-term-ms = <240>;
-            flavor = "balanced";
+            tapping-term-ms = <230>;
+            flavor = "tap-preferred";
             hold-trigger-on-release;
-            hold-trigger-key-positions = <13 14 15 16>;
-            quick-tap-ms = <175>;
+            hold-trigger-key-positions = <13 14 15 16 37>;
+            quick-tap-ms = <145>;
             require-prior-idle-ms = <140>;
         };
 
@@ -32,11 +32,39 @@
             bindings = <&kp>, <&kp>;
 
             #binding-cells = <2>;
-            tapping-term-ms = <240>;
-            flavor = "balanced";
+            tapping-term-ms = <230>;
+            flavor = "tap-preferred";
             hold-trigger-on-release;
-            hold-trigger-key-positions = <19 20 21 22>;
-            quick-tap-ms = <175>;
+            hold-trigger-key-positions = <19 20 21 22 40>;
+            quick-tap-ms = <145>;
+            require-prior-idle-ms = <140>;
+        };
+
+        LTR: LTR {
+            compatible = "zmk,behavior-hold-tap";
+            label = "LTR";
+            bindings = <&mo>, <&kp>;
+
+            #binding-cells = <2>;
+            tapping-term-ms = <230>;
+            flavor = "tap-preferred";
+            hold-trigger-on-release;
+            hold-trigger-key-positions = <40>;
+            quick-tap-ms = <145>;
+            require-prior-idle-ms = <140>;
+        };
+
+        LTL: LTL {
+            compatible = "zmk,behavior-hold-tap";
+            label = "LTL";
+            bindings = <&mo>, <&kp>;
+
+            #binding-cells = <2>;
+            tapping-term-ms = <230>;
+            flavor = "tap-preferred";
+            hold-trigger-on-release;
+            hold-trigger-key-positions = <37>;
+            quick-tap-ms = <145>;
             require-prior-idle-ms = <140>;
         };
     };
@@ -57,7 +85,7 @@
 &kp TAB     &kp Q             &kp W              &kp F               &kp P                 &kp B            &kp J    &kp L                  &kp U                &kp Y              &kp SEMI           &kp BACKSLASH
 &kp BSPC    &HRML LEFT_GUI A  &HRML RIGHT_ALT R  &HRML LEFT_SHIFT S  &HRML LEFT_CONTROL T  &kp G            &kp M    &HRMR RIGHT_CONTROL N  &HRMR RIGHT_SHIFT E  &HRMR RIGHT_ALT I  &HRMR RIGHT_GUI O  &kp SQT
 &kp DELETE  &kp Z             &kp X              &kp C               &kp D                 &kp V            &kp K    &kp H                  &kp COMMA            &kp DOT            &kp FSLH           &mt K_NEXT K_PLAY_PAUSE
-                                                 &kp DELETE          &lt 1 BACKSPACE       &mt TAB SPACE    &kp RET  &lt 2 ESCAPE           &kp ESCAPE
+                                                 &kp DELETE          &LTL 1 BACKSPACE      &mt TAB SPACE    &kp RET  &LTL 2 ESCAPE          &kp ESCAPE
             >;
         };
 
