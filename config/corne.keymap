@@ -45,7 +45,7 @@
 
             #binding-cells = <2>;
             tapping-term-ms = <180>;
-            flavor = "tap-preferred";
+            flavor = "hold-preferred";
             hold-trigger-on-release;
             hold-trigger-key-positions = <37>;
             quick-tap-ms = <145>;
@@ -59,7 +59,7 @@
 
             #binding-cells = <2>;
             tapping-term-ms = <180>;
-            flavor = "tap-preferred";
+            flavor = "hold-preferred";
             hold-trigger-on-release;
             hold-trigger-key-positions = <40>;
             quick-tap-ms = <145>;
