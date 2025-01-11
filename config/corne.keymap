@@ -65,6 +65,19 @@
             quick-tap-ms = <145>;
             require-prior-idle-ms = <140>;
         };
+
+        TM: TM {
+            compatible = "zmk,behavior-hold-tap";
+            label = "TM";
+            bindings = <&kp>, <&kp>;
+
+            #binding-cells = <2>;
+            tapping-term-ms = <180>;
+            flavor = "tap-preferred";
+            hold-trigger-on-release;
+            quick-tap-ms = <145>;
+            require-prior-idle-ms = <140>;
+        };
     };
 
     combos { compatible = "zmk,combos"; };
@@ -80,10 +93,10 @@
             //                    | GUI | LWR | SPC |   | ENT | RSE  | ALT |
 
             bindings = <
-&kp TAB        &kp Q             &kp W             &kp F               &kp P                 &kp B        &kp J                   &kp L                  &kp U                &kp Y              &kp SEMI           &kp APOSTROPHE
-&kp BACKSPACE  &HRML LEFT_ALT A  &HRML LEFT_GUI R  &HRML LEFT_SHIFT S  &HRML LEFT_CONTROL T  &kp G        &kp M                   &HRMR RIGHT_CONTROL N  &HRMR RIGHT_SHIFT E  &HRMR RIGHT_GUI I  &HRMR RIGHT_ALT O  &kp SQT
-&kp DELETE     &kp Z             &kp X             &kp C               &kp D                 &kp V        &kp K                   &kp H                  &kp COMMA            &kp DOT            &kp FSLH           &mt K_NEXT K_PLAY_PAUSE
-                                                   &kp TAB             &LTL 1 BACKSPACE      &kp SPACE    &HRMR RIGHT_ALT RETURN  &LTR 2 ESCAPE          &kp RIGHT_ALT
+&kp TAB        &kp Q             &kp W             &kp F                &kp P                 &kp B            &kp J                 &kp L                  &kp U                &kp Y              &kp SEMI           &none
+&kp BACKSPACE  &HRML LEFT_ALT A  &HRML LEFT_GUI R  &HRML LEFT_SHIFT S   &HRML LEFT_CONTROL T  &kp G            &kp M                 &HRMR RIGHT_CONTROL N  &HRMR RIGHT_SHIFT E  &HRMR RIGHT_GUI I  &HRMR RIGHT_ALT O  &kp SQT
+&kp DELETE     &kp Z             &kp X             &kp C                &kp D                 &kp V            &kp K                 &kp H                  &kp COMMA            &kp DOT            &kp FSLH           &mt K_NEXT K_PLAY_PAUSE
+                                                   &TM LEFT_ALT DELETE  &LTL 1 BACKSPACE      &TM TAB SPACE    &TM RIGHT_ALT RETURN  &LTR 2 ESCAPE          &none
             >;
         };
 
@@ -95,10 +108,10 @@
             //                    | GUI |     | SPC |   | ENT |     | ALT     |
 
             bindings = <
-&kp TAB        &none         &kp N7        &kp N8        &kp N9        &none        &none    &kp COMMA  &kp DOT   &none   &kp K_VOLUME_UP    &none
-&kp BACKSPACE  &kp NUMBER_0  &kp NUMBER_4  &kp N5        &kp NUMBER_6  &none        &none    &kp LEFT   &kp DOWN  &kp UP  &kp RIGHT          &kp K_MUTE
-&kp DELETE     &none         &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &none        &none    &none      &none     &none   &kp K_VOLUME_DOWN  &kp K_PREVIOUS
-                                           &trans        &trans        &kp SPACE    &kp RET  &mo 2      &trans
+&kp TAB        &none         &kp N7        &kp N8        &kp N9        &none        &none      &kp COMMA  &kp DOT   &none   &kp K_VOLUME_UP    &none
+&kp BACKSPACE  &kp NUMBER_0  &kp NUMBER_4  &kp N5        &kp NUMBER_6  &kp PLUS     &kp EQUAL  &kp LEFT   &kp DOWN  &kp UP  &kp RIGHT          &kp K_MUTE
+&kp DELETE     &none         &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &none        &none      &none      &none     &none   &kp K_VOLUME_DOWN  &kp K_PREVIOUS
+                                           &trans        &trans        &kp SPACE    &kp RET    &mo 2      &trans
             >;
         };
 
