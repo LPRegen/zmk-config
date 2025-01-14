@@ -44,10 +44,8 @@
             bindings = <&mo>, <&kp>;
 
             #binding-cells = <2>;
-            tapping-term-ms = <180>;
-            flavor = "hold-preferred";
-            hold-trigger-on-release;
-            hold-trigger-key-positions = <37>;
+            tapping-term-ms = <160>;
+            flavor = "balanced";
             quick-tap-ms = <145>;
             require-prior-idle-ms = <140>;
         };
@@ -58,10 +56,8 @@
             bindings = <&mo>, <&kp>;
 
             #binding-cells = <2>;
-            tapping-term-ms = <180>;
-            flavor = "hold-preferred";
-            hold-trigger-on-release;
-            hold-trigger-key-positions = <40>;
+            tapping-term-ms = <160>;
+            flavor = "balanced";
             quick-tap-ms = <145>;
             require-prior-idle-ms = <140>;
         };
@@ -91,10 +87,10 @@
             //                    | GUI | LWR | SPC |   | ENT | RSE  | ALT |
 
             bindings = <
-&kp TAB        &kp Q              &kp W             &kp F               &kp P                 &kp B        &kp J       &kp L                  &kp U                &kp Y              &kp SEMI           &none
+&kp TAB        &kp Q              &kp W             &kp F               &kp P                 &kp B        &kp J       &kp L                  &kp U                &kp Y              &kp SEMI           &kp LEFT_ALT
 &kp BACKSPACE  &HRML RIGHT_ALT A  &HRML LEFT_GUI R  &HRML LEFT_SHIFT S  &HRML LEFT_CONTROL T  &kp G        &kp M       &HRMR RIGHT_CONTROL N  &HRMR RIGHT_SHIFT E  &HRMR RIGHT_GUI I  &HRMR RIGHT_ALT O  &kp SQT
 &kp DELETE     &kp Z              &kp X             &kp C               &kp D                 &kp V        &kp K       &kp H                  &kp COMMA            &kp DOT            &kp FSLH           &mt K_NEXT K_PLAY_PAUSE
-                                                    &TM LEFT_ALT TAB    &LTL 1 BACKSPACE      &kp SPACE    &kp RETURN  &LTR 2 ESCAPE          &none
+                                                    &kp ESCAPE          &LTL 1 BACKSPACE      &kp SPACE    &kp RETURN  &LTR 2 TAB             &kp ESCAPE
             >;
         };
 
