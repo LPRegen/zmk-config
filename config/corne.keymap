@@ -104,7 +104,7 @@
             bindings = <
 &kp TAB        &none         &kp N7        &kp N8        &kp N9        &none        &none    &kp EQUAL  &kp COMMA  &kp DOT          &kp COLON          &none
 &kp BACKSPACE  &kp NUMBER_0  &kp NUMBER_4  &kp N5        &kp NUMBER_6  &kp PLUS     &none    &kp LEFT   &kp DOWN   &kp UP           &kp RIGHT          &kp K_MUTE
-&kp DELETE     &none         &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &none        &none    &kp ASTRK  &kp SLASH  &kp C_VOLUME_UP  &kp K_VOLUME_DOWN  &kp K_PREVIOUS
+&kp DELETE     &none         &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &none        &none    &kp ASTRK  &kp SLASH  &kp K_VOLUME_UP  &kp K_VOLUME_DOWN  &kp K_PREVIOUS
                                            &trans        &trans        &kp SPACE    &kp RET  &mo 2      &trans
             >;
         };
@@ -117,9 +117,9 @@
             //                    | GUI |     | SPC |   | ENT |     | ALT |
 
             bindings = <
-&kp TAB        &none            &kp AT             &kp HASH         &kp DLLR               &none        &none     &kp PERCENT  &kp EQUAL  &kp CARET      &none     &none
-&kp BACKSPACE  &kp EXCLAMATION  &kp LEFT_BRACKET   &kp LEFT_BRACE   &kp LEFT_PARENTHESIS   &kp PLUS     &kp AMPS  &kp MINUS    &kp GRAVE  &kp BACKSLASH  &kp STAR  &none
-&kp DELETE     &none            &kp RIGHT_BRACKET  &kp RIGHT_BRACE  &kp RIGHT_PARENTHESIS  &none        &none     &kp UNDER    &kp TILDE  &kp PIPE       &none     &none
+&kp TAB        &none            &kp AT             &kp HASH         &kp DLLR               &none        &none     &kp PERCENT  &kp EQUAL  &kp CARET      &kp COLON  &none
+&kp BACKSPACE  &kp EXCLAMATION  &kp LEFT_BRACKET   &kp LEFT_BRACE   &kp LEFT_PARENTHESIS   &kp PLUS     &kp AMPS  &kp MINUS    &kp GRAVE  &kp BACKSLASH  &kp STAR   &none
+&kp DELETE     &none            &kp RIGHT_BRACKET  &kp RIGHT_BRACE  &kp RIGHT_PARENTHESIS  &none        &none     &kp UNDER    &kp TILDE  &kp PIPE       &none      &none
                                                    &trans           &mo 3                  &kp SPACE    &kp RET   &trans       &trans
             >;
         };
