@@ -17,11 +17,10 @@
 
             #binding-cells = <2>;
             tapping-term-ms = <230>;
-            flavor = "tap-preferred";
+            flavor = "balanced";
             hold-trigger-on-release;
-            hold-trigger-key-positions = <6 7 8 9 10 11 18 19 20 21 22 23 30 31 32 33 34 35>;
+            hold-trigger-key-positions = <6 7 8 9 10 11 18 19 20 21 22 23 30 31 32 33 34 35 30 31 32 33 39 40 41 36 37 38>;
             quick-tap-ms = <145>;
-            require-prior-idle-ms = <140>;
         };
 
         HRMR: HRMR {
@@ -31,11 +30,10 @@
 
             #binding-cells = <2>;
             tapping-term-ms = <230>;
-            flavor = "tap-preferred";
+            flavor = "balanced";
             hold-trigger-on-release;
-            hold-trigger-key-positions = <0 1 2 3 4 5 12 13 14 15 16 17 24 25 26 27 28 29>;
+            hold-trigger-key-positions = <0 1 2 3 4 5 12 13 14 15 16 17 24 25 26 27 28 29 25 29 36 37 38 39 40 41>;
             quick-tap-ms = <145>;
-            require-prior-idle-ms = <180>;
         };
 
         LTR: LTR {
@@ -72,9 +70,25 @@
             flavor = "tap-preferred";
             require-prior-idle-ms = <90>;
         };
+
+        cp_pt: cp_pt {
+            compatible = "zmk,behavior-tap-dance";
+            label = "CP_PT";
+            #binding-cells = <0>;
+            bindings = <&kp K_COPY>, <&kp K_PASTE>;
+
+            tapping-term-ms = <150>;
+        };
     };
 
-    combos { compatible = "zmk,combos"; };
+    combos {
+        compatible = "zmk,combos";
+
+        Capslock {
+            bindings = <&kp CAPSLOCK>;
+            key-positions = <5 6>;
+        };
+    };
 
     keymap {
         compatible = "zmk,keymap";
@@ -87,10 +101,10 @@
             //                    | GUI | LWR | SPC |   | ENT | RSE  | ALT |
 
             bindings = <
-&kp TAB        &kp Q             &kp W              &kp F               &kp P                 &kp B               &kp J       &kp L                  &kp U                &kp Y             &kp SEMI           &kp LEFT_ALT
-&kp BACKSPACE  &HRML LEFT_GUI A  &HRML RIGHT_ALT R  &HRML LEFT_SHIFT S  &HRML LEFT_CONTROL T  &kp G               &kp M       &HRMR RIGHT_CONTROL N  &HRMR RIGHT_SHIFT E  &HRMR LEFT_ALT I  &HRMR RIGHT_GUI O  &kp SQT
-&kp DELETE     &kp Z             &kp X              &kp C               &kp D                 &kp V               &kp K       &kp H                  &kp COMMA            &kp DOT           &kp FSLH           &mt K_NEXT K_PLAY_PAUSE
-                                                    &kp ESCAPE          &LTL 1 BACKSPACE      &TM ESCAPE SPACE    &kp RETURN  &LTR 2 TAB             &kp ESCAPE
+&kp LEFT_ALT   &kp Q             &kp W              &kp F               &kp P                 &kp B           &kp J       &kp L                  &kp U                &kp Y             &kp SEMI           &cp_pt
+&kp BACKSPACE  &HRML LEFT_GUI A  &HRML RIGHT_ALT R  &HRML LEFT_SHIFT S  &HRML LEFT_CONTROL T  &kp G           &kp M       &HRMR RIGHT_CONTROL N  &HRMR RIGHT_SHIFT E  &HRMR LEFT_ALT I  &HRMR RIGHT_GUI O  &kp SQT
+&kp DELETE     &kp Z             &kp X              &kp C               &kp D                 &kp V           &kp K       &kp H                  &kp COMMA            &kp DOT           &kp FSLH           &mt K_NEXT K_PLAY_PAUSE
+                                                    &kp ESCAPE          &LTL 1 BACKSPACE      &LTL 1 SPACE    &kp RETURN  &LTR 2 TAB             &kp ESCAPE
             >;
         };
 
@@ -126,10 +140,10 @@
 
         layer_3 {
             bindings = <
-&none        &none  &bt BT_PRV  &bt BT_CLR  &bt BT_NXT  &none        &none      &kp F7  &kp F8  &kp F9  &kp F10  &none
-&sys_reset   &none  &none       &none       &none       &soft_off    &soft_off  &kp F4  &kp F5  &kp F6  &kp F11  &sys_reset
-&bootloader  &none  &none       &none       &none       &none        &none      &kp F1  &kp F2  &kp F3  &kp F12  &bootloader
-                                &none       &trans      &none        &none      &none   &none
+&kp F1       &kp F2  &kp F3      &kp F4      &kp F5      &kp F6       &kp F7     &kp F8  &kp F9  &kp F10  &kp F11  &kp F12
+&sys_reset   &none   &bt BT_PRV  &bt BT_CLR  &bt BT_NXT  &soft_off    &soft_off  &none   &none   &none    &none    &sys_reset
+&bootloader  &none   &none       &none       &none       &none        &none      &none   &none   &none    &none    &bootloader
+                                 &none       &trans      &none        &none      &none   &none
             >;
         };
     };
