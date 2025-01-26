@@ -68,15 +68,6 @@
             flavor = "tap-preferred";
             require-prior-idle-ms = <90>;
         };
-
-        cp_pt: cp_pt {
-            compatible = "zmk,behavior-tap-dance";
-            label = "CP_PT";
-            #binding-cells = <0>;
-            bindings = <&kp C_AC_COPY>, <&kp C_AC_PASTE>;
-
-            tapping-term-ms = <150>;
-        };
     };
 
     combos {
@@ -114,8 +105,8 @@
             //                    | GUI | LWR | SPC |   | ENT | RSE  | ALT |
 
             bindings = <
-&kp LEFT_ALT   &kp Q             &kp W              &kp F               &kp P                 &kp B           &kp J          &kp L                  &kp U                &kp Y             &mt LS(SEMI) SEMI    &cp_pt
-&kp BACKSPACE  &HRML LEFT_GUI A  &HRML RIGHT_ALT R  &HRML LEFT_SHIFT S  &HRML LEFT_CONTROL T  &kp G           &kp M          &HRMR RIGHT_CONTROL N  &HRMR RIGHT_SHIFT E  &HRMR LEFT_ALT I  &HRMR RIGHT_GUI O    &kp SQT
+&kp LEFT_ALT   &kp Q             &kp W              &kp F               &kp P                 &kp B           &kp J          &kp L                  &kp U                &kp Y             &mt SEMI LS(SEMI)    &kp K_COPY
+&kp BACKSPACE  &HRML LEFT_GUI A  &HRML RIGHT_ALT R  &HRML LEFT_SHIFT S  &HRML LEFT_CONTROL T  &kp G           &kp M          &HRMR RIGHT_CONTROL N  &HRMR RIGHT_SHIFT E  &HRMR LEFT_ALT I  &HRMR RIGHT_GUI O    &mt DOUBLE_QUOTES SINGLE_QUOTE
 &kp DELETE     &kp Z             &kp X              &kp C               &kp D                 &kp V           &kp K          &kp H                  &mt LS(COMMA) COMMA  &mt LS(DOT) DOT   &mt LS(SLASH) SLASH  &mt K_NEXT K_PLAY_PAUSE
                                                     &kp ESCAPE          &LTL 2 BACKSPACE      &LTL 1 SPACE    &LTR 1 RETURN  &LTR 2 TAB             &kp ESCAPE
             >;
