@@ -21,7 +21,7 @@
             hold-trigger-on-release;
             hold-trigger-key-positions = <6 7 8 9 10 11 18 19 20 21 22 23 30 31 32 33 34 35 30 31 32 33>;
             quick-tap-ms = <150>;
-            require-prior-idle-ms = <190>;
+            require-prior-idle-ms = <210>;
         };
 
         HRMR: HRMR {
@@ -35,7 +35,7 @@
             hold-trigger-on-release;
             hold-trigger-key-positions = <0 1 2 3 4 5 12 13 14 15 16 17 24 25 26 27 28 29>;
             quick-tap-ms = <150>;
-            require-prior-idle-ms = <190>;
+            require-prior-idle-ms = <210>;
         };
 
         LTR: LTR {
@@ -47,7 +47,7 @@
             tapping-term-ms = <160>;
             flavor = "balanced";
             quick-tap-ms = <145>;
-            hold-trigger-key-positions = <0 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35>;
+            require-prior-idle-ms = <100>;
         };
 
         LTL: LTL {
@@ -59,7 +59,7 @@
             tapping-term-ms = <160>;
             flavor = "balanced";
             quick-tap-ms = <145>;
-            hold-trigger-key-positions = <0 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35>;
+            require-prior-idle-ms = <100>;
         };
 
         TM: TM {
@@ -121,7 +121,7 @@
 &kp LEFT_ALT   &kp Q             &kp W              &kp F               &kp P                 &kp B           &kp J          &kp L                  &kp U                &kp Y             &mt SEMI LS(SEMI)    &cp_pt
 &kp BACKSPACE  &HRML LEFT_GUI A  &HRML RIGHT_ALT R  &HRML LEFT_SHIFT S  &HRML LEFT_CONTROL T  &kp G           &kp M          &HRMR RIGHT_CONTROL N  &HRMR RIGHT_SHIFT E  &HRMR LEFT_ALT I  &HRMR RIGHT_GUI O    &mt DOUBLE_QUOTES SINGLE_QUOTE
 &kp DELETE     &kp Z             &kp X              &kp C               &kp D                 &kp V           &kp K          &kp H                  &mt LS(COMMA) COMMA  &mt LS(DOT) DOT   &mt LS(SLASH) SLASH  &mt K_NEXT K_PLAY_PAUSE
-                                                    &kp ESCAPE          &LTL 2 BACKSPACE      &LTL 1 SPACE    &LTR 1 RETURN  &LTR 2 TAB             &kp ESCAPE
+                                                    &LTL 3 ESCAPE       &LTL 2 BACKSPACE      &LTL 1 SPACE    &LTR 1 RETURN  &LTR 2 TAB             &LTR 3 ESCAPE
             >;
         };
 
@@ -133,10 +133,10 @@
             //                    | GUI |     | SPC |   | ENT |     | ALT     |
 
             bindings = <
-&none      &kp MINUS      &mt LS(N7) N7              &mt LS(N8) N8              &mt LS(N9) N9              &none        &none    &kp EQUAL   &kp HOME    &kp END  &mt LS(SEMI) SEMI  &none
-&kp SLASH  &mt LS(N0) N0  &mt LS(NUMBER_4) NUMBER_4  &mt LS(N5) N5              &mt LS(NUMBER_6) NUMBER_6  &none        &none    &kp LEFT    &kp DOWN    &kp UP   &kp RIGHT          &none
-&kp EQUAL  &kp PLUS       &mt LS(NUMBER_1) NUMBER_1  &mt LS(NUMBER_2) NUMBER_2  &mt LS(NUMBER_3) NUMBER_3  &none        &none    &kp ASTRK   &kp COMMA   &kp DOT  &kp SLASH          &none
-                                                     &kp ESCAPE                 &LTL 2 BACKSPACE           &kp SPACE    &kp RET  &LTR 2 TAB  &kp ESCAPE
+&none      &kp MINUS      &mt LS(N7) N7              &mt LS(N8) N8              &mt LS(N9) N9              &none        &none    &kp EQUAL  &kp HOME   &kp END  &mt LS(SEMI) SEMI  &none
+&kp SLASH  &mt LS(N0) N0  &mt LS(NUMBER_4) NUMBER_4  &mt LS(N5) N5              &mt LS(NUMBER_6) NUMBER_6  &none        &none    &kp LEFT   &kp DOWN   &kp UP   &kp RIGHT          &none
+&kp EQUAL  &kp PLUS       &mt LS(NUMBER_1) NUMBER_1  &mt LS(NUMBER_2) NUMBER_2  &mt LS(NUMBER_3) NUMBER_3  &none        &none    &kp ASTRK  &kp COMMA  &kp DOT  &kp SLASH          &none
+                                                     &trans                     &trans                     &kp SPACE    &kp RET  &trans     &trans
             >;
         };
 
@@ -159,17 +159,8 @@
             bindings = <
 &kp F1       &kp F2  &kp F3      &kp F4      &kp F5      &kp F6       &kp F7     &kp F8             &kp F9           &kp F10     &kp F11  &kp F12
 &sys_reset   &none   &bt BT_PRV  &bt BT_CLR  &bt BT_NXT  &soft_off    &soft_off  &kp K_VOLUME_DOWN  &kp K_VOLUME_UP  &kp K_MUTE  &none    &sys_reset
-&bootloader  &none   &none       &none       &none       &to 4        &none      &none              &none            &none       &none    &bootloader
+&bootloader  &none   &none       &none       &none       &none        &none      &none              &none            &none       &none    &bootloader
                                  &none       &trans      &none        &none      &none              &none
-            >;
-        };
-
-        layer_4 {
-            bindings = <
-&kp TAB   &kp Q  &kp W  &kp E          &kp R             &kp T           &kp Y          &kp U       &kp I          &kp O    &kp P     &kp LBKT
-&kp BSPC  &kp A  &kp S  &kp D          &kp F             &kp G           &kp H          &kp J       &kp K          &kp L    &kp SEMI  &kp SQT
-&kp DEL   &kp Z  &kp X  &kp C          &kp V             &kp B           &kp N          &kp M       &kp COMMA      &kp DOT  &kp FSLH  &none
-                        &LTL 3 ESCAPE  &LTL 2 BACKSPACE  &LTL 1 SPACE    &LTR 1 RETURN  &LTR 2 TAB  &LTR 3 ESCAPE
             >;
         };
     };
