@@ -17,10 +17,11 @@
 
             #binding-cells = <2>;
             tapping-term-ms = <150>;
-            flavor = "balanced";
+            flavor = "tap-preferred";
             hold-trigger-key-positions = <19 20 21 22 39 40 38 37 36 41>;
             quick-tap-ms = <150>;
             require-prior-idle-ms = <180>;
+            hold-trigger-on-release;
         };
 
         HRMR: HRMR {
@@ -30,10 +31,11 @@
 
             #binding-cells = <2>;
             tapping-term-ms = <150>;
-            flavor = "balanced";
+            flavor = "tap-preferred";
             hold-trigger-key-positions = <13 14 15 16 38 37 39 40 36 41>;
             quick-tap-ms = <150>;
             require-prior-idle-ms = <180>;
+            hold-trigger-on-release;
         };
 
         LTR: LTR {
