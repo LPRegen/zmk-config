@@ -103,9 +103,7 @@
             #binding-cells = <0>;
             bindings =
                 <&macro_press>,
-                <&kp LS(LEFT_GUI)>,
-                <&macro_press>,
-                <&kp LEFT_ARROW>,
+                <&kp LS(LEFT_GUI) &kp LEFT_ARROW>,
                 <&macro_release>;
 
             label = "MW_LEFT";
@@ -116,9 +114,7 @@
             #binding-cells = <0>;
             bindings =
                 <&macro_press>,
-                <&kp LS(LEFT_GUI)>,
-                <&macro_press>,
-                <&kp DOWN>,
+                <&kp LS(LEFT_GUI) &kp DOWN>,
                 <&macro_release>;
 
             label = "MW_DOWN";
@@ -129,9 +125,7 @@
             #binding-cells = <0>;
             bindings =
                 <&macro_press>,
-                <&kp LS(LEFT_GUI)>,
-                <&macro_press>,
-                <&kp UP_ARROW>,
+                <&kp LS(LEFT_GUI) &kp UP_ARROW>,
                 <&macro_release>;
 
             label = "MW_UP";
@@ -142,9 +136,7 @@
             #binding-cells = <0>;
             bindings =
                 <&macro_press>,
-                <&kp LS(LEFT_GUI)>,
-                <&macro_press>,
-                <&kp RIGHT>,
+                <&kp LS(LEFT_GUI) &kp RIGHT>,
                 <&macro_release>;
 
             label = "MW_RIGHT";
