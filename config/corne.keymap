@@ -16,8 +16,8 @@
             bindings = <&kp>, <&kp>;
 
             #binding-cells = <2>;
-            tapping-term-ms = <160>;
-            flavor = "balanced";
+            tapping-term-ms = <200>;
+            flavor = "tap-preferred";
             quick-tap-ms = <150>;
             require-prior-idle-ms = <210>;
             hold-trigger-on-release;
@@ -29,8 +29,8 @@
             bindings = <&kp>, <&kp>;
 
             #binding-cells = <2>;
-            tapping-term-ms = <160>;
-            flavor = "balanced";
+            tapping-term-ms = <200>;
+            flavor = "tap-preferred";
             quick-tap-ms = <150>;
             require-prior-idle-ms = <210>;
             hold-trigger-on-release;
