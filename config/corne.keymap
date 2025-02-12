@@ -85,6 +85,70 @@
             bindings = <&kp LS(MINUS)>;
             key-positions = <3 8>;
         };
+
+        BL_right {
+            bindings = <&bootloader>;
+            key-positions = <11 35>;
+        };
+
+        BL_left {
+            bindings = <&bootloader>;
+            key-positions = <0 24>;
+        };
+    };
+
+    macros {
+        MW_left: MW_left {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&macro_press>,
+                <&kp LS(LEFT_GUI)>,
+                <&macro_press>,
+                <&kp LEFT_ARROW>,
+                <&macro_release>;
+
+            label = "MW_LEFT";
+        };
+
+        MW_down: MW_down {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&macro_press>,
+                <&kp LS(LEFT_GUI)>,
+                <&macro_press>,
+                <&kp DOWN>,
+                <&macro_release>;
+
+            label = "MW_DOWN";
+        };
+
+        MW_up: MW_up {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&macro_press>,
+                <&kp LS(LEFT_GUI)>,
+                <&macro_press>,
+                <&kp UP_ARROW>,
+                <&macro_release>;
+
+            label = "MW_UP";
+        };
+
+        MW_right: MW_right {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&macro_press>,
+                <&kp LS(LEFT_GUI)>,
+                <&macro_press>,
+                <&kp RIGHT>,
+                <&macro_release>;
+
+            label = "MW_RIGHT";
+        };
     };
 
     keymap {
@@ -137,10 +201,10 @@
 
         layer_3 {
             bindings = <
-&kp F1       &kp F2  &kp F3      &kp F4      &kp F5      &kp F6       &kp F7     &kp F8             &kp F9           &kp F10     &kp F11  &kp F12
-&sys_reset   &none   &bt BT_PRV  &bt BT_CLR  &bt BT_NXT  &soft_off    &soft_off  &kp K_VOLUME_DOWN  &kp K_VOLUME_UP  &kp K_MUTE  &none    &sys_reset
-&bootloader  &none   &none       &none       &none       &none        &none      &none              &none            &none       &none    &bootloader
-                                 &none       &trans      &none        &none      &none              &none
+&kp F1      &kp F2  &kp F3      &kp F4      &kp F5      &kp F6       &kp F7     &kp F8    &kp F9    &kp F10  &kp F11    &kp F12
+&none       &none   &bt BT_PRV  &bt BT_CLR  &bt BT_NXT  &soft_off    &soft_off  &MW_left  &MW_down  &MW_up   &MW_right  &none
+&sys_reset  &none   &none       &none       &none       &none        &none      &none     &none     &none    &none      &sys_reset
+                                &none       &none       &none        &none      &none     &none
             >;
         };
     };
