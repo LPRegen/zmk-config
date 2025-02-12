@@ -97,52 +97,6 @@
         };
     };
 
-    macros {
-        MW_left: MW_left {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings =
-                <&macro_press>,
-                <&kp LS(LEFT_GUI) &kp LEFT_ARROW>,
-                <&macro_release>;
-
-            label = "MW_LEFT";
-        };
-
-        MW_down: MW_down {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings =
-                <&macro_press>,
-                <&kp LS(LEFT_GUI) &kp DOWN>,
-                <&macro_release>;
-
-            label = "MW_DOWN";
-        };
-
-        MW_up: MW_up {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings =
-                <&macro_press>,
-                <&kp LS(LEFT_GUI) &kp UP_ARROW>,
-                <&macro_release>;
-
-            label = "MW_UP";
-        };
-
-        MW_right: MW_right {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings =
-                <&macro_press>,
-                <&kp LS(LEFT_GUI) &kp RIGHT>,
-                <&macro_release>;
-
-            label = "MW_RIGHT";
-        };
-    };
-
     keymap {
         compatible = "zmk,keymap";
 
@@ -193,10 +147,10 @@
 
         layer_3 {
             bindings = <
-&kp F1      &kp F2  &kp F3      &kp F4      &kp F5      &kp F6       &kp F7     &kp F8    &kp F9    &kp F10  &kp F11    &kp F12
-&none       &none   &bt BT_PRV  &bt BT_CLR  &bt BT_NXT  &soft_off    &soft_off  &MW_left  &MW_down  &MW_up   &MW_right  &none
-&sys_reset  &none   &none       &none       &none       &none        &none      &none     &none     &none    &none      &sys_reset
-                                &none       &none       &none        &none      &none     &none
+&kp F1      &kp F2  &kp F3      &kp F4      &kp F5      &kp F6       &kp F7     &kp F8              &kp F9              &kp F10           &kp F11              &kp F12
+&none       &none   &bt BT_PRV  &bt BT_CLR  &bt BT_NXT  &soft_off    &soft_off  &kp LG(LEFT_ARROW)  &kp LG(DOWN_ARROW)  &kp LG(UP_ARROW)  &kp LG(RIGHT_ARROW)  &none
+&sys_reset  &none   &none       &none       &none       &none        &none      &kp LS(LG(LEFT))    &kp LS(LG(DOWN))    &kp LS(LG(UP))    &kp LS(LG(RIGHT))    &sys_reset
+                                &none       &none       &none        &none      &none               &none
             >;
         };
     };
