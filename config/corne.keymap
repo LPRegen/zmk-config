@@ -85,16 +85,6 @@
             bindings = <&kp LS(MINUS)>;
             key-positions = <3 8>;
         };
-
-        BL_right {
-            bindings = <&bootloader>;
-            key-positions = <11 35>;
-        };
-
-        BL_left {
-            bindings = <&bootloader>;
-            key-positions = <0 24>;
-        };
     };
 
     keymap {
@@ -147,10 +137,10 @@
 
         layer_3 {
             bindings = <
-&kp F1      &kp F2  &kp F3      &kp F4      &kp F5      &kp F6       &kp F7     &kp F8              &kp F9              &kp F10           &kp F11              &kp F12
-&none       &none   &bt BT_PRV  &bt BT_CLR  &bt BT_NXT  &soft_off    &soft_off  &kp LG(LEFT_ARROW)  &kp LG(DOWN_ARROW)  &kp LG(UP_ARROW)  &kp LG(RIGHT_ARROW)  &none
-&sys_reset  &none   &none       &none       &none       &none        &none      &kp LS(LG(LEFT))    &kp LS(LG(DOWN))    &kp LS(LG(UP))    &kp LS(LG(RIGHT))    &sys_reset
-                                &none       &none       &none        &none      &none               &none
+&kp F1      &kp F2  &kp F3      &kp F4      &kp F5      &kp F6         &kp F7       &kp F8              &kp F9              &kp F10           &kp F11              &kp F12
+&none       &none   &bt BT_PRV  &bt BT_CLR  &bt BT_NXT  &soft_off      &soft_off    &kp LG(LEFT_ARROW)  &kp LG(DOWN_ARROW)  &kp LG(UP_ARROW)  &kp LG(RIGHT_ARROW)  &none
+&sys_reset  &none   &none       &none       &none       &bootloader    &bootloader  &kp LS(LG(LEFT))    &kp LS(LG(DOWN))    &kp LS(LG(UP))    &kp LS(LG(RIGHT))    &sys_reset
+                                &none       &none       &none          &none        &none               &none
             >;
         };
     };
