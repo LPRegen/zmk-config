@@ -98,9 +98,9 @@
             //                    | GUI | LWR | SPC |   | ENT | RSE  | ALT |
 
             bindings = <
-&kp LEFT_ALT   &kp Q             &kp W              &kp F               &kp P                 &kp B           &kp J          &kp L                  &kp U                &kp Y             &mt SEMICOLON COLON  &mt K_NEXT K_PLAY_PAUSE
-&kp BACKSPACE  &HRML LEFT_GUI A  &HRML RIGHT_ALT R  &HRML LEFT_SHIFT S  &HRML LEFT_CONTROL T  &kp G           &kp M          &HRMR RIGHT_CONTROL N  &HRMR RIGHT_SHIFT E  &HRMR LEFT_ALT I  &HRMR RIGHT_GUI O    &kp SINGLE_QUOTE
-&kp DELETE     &kp Z             &kp X              &kp C               &kp D                 &kp V           &kp K          &kp H                  &kp COMMA            &kp DOT           &kp SLASH            &none
+&kp LEFT_ALT   &kp Q             &kp W              &kp F               &kp P                 &kp B           &kp J          &kp L                  &kp U                &kp Y             &mt SEMI LS(SEMI)  &mt K_NEXT K_PLAY_PAUSE
+&kp BACKSPACE  &HRML LEFT_GUI A  &HRML RIGHT_ALT R  &HRML LEFT_SHIFT S  &HRML LEFT_CONTROL T  &kp G           &kp M          &HRMR RIGHT_CONTROL N  &HRMR RIGHT_SHIFT E  &HRMR LEFT_ALT I  &HRMR RIGHT_GUI O  &kp SINGLE_QUOTE
+&kp DELETE     &kp Z             &kp X              &kp C               &kp D                 &kp V           &kp K          &kp H                  &kp COMMA            &kp DOT           &kp SLASH          &none
                                                     &LTL 3 ESCAPE       &LTL 2 BACKSPACE      &LTL 1 SPACE    &LTR 1 RETURN  &LTR 2 TAB             &LTR 3 ESCAPE
             >;
         };
